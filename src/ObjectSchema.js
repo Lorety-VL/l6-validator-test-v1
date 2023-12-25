@@ -11,7 +11,6 @@ export default class ObjectSchema {
     const keys1 = Object.keys(this.schema);
     const keys2 = Object.keys(value);
     if (keys2.length !== keys1.length) return false;
-    // return keys1.every((key) => this.schema[key].isValid(value[key]));
     return keys1.every((key) => {
       if (
         typeof value[key] === 'object'
